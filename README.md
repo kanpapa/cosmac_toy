@@ -18,7 +18,7 @@ Q出力は簡易アンプでスピーカーを直接駆動したり、アンプ�
 ![Image](/docs/images/cosmac_cpu_rev1_3.png)
 
 - COSMAC CPUボード回路図 [cosmac_cpu_rev1_4_sch.pdf](/schematics/cosmac_cpu_rev1_4_sch.pdf) (Rev1.4 2019/9/9)
-- 部品表 COSMAC_SERIES_BOM (準備中)
+- 部品表 [cosmac_cpu_rev1_4_bom.md](/bom/cosmac_cpu_rev1_4_bom.md)
 - 補足説明
     - SW1はメモリスタンバイスイッチです。STBにするとバッテリーで内容が保持されます。
     - JP1はQ出力をアンプに通すか、直接出力するかの選択用です。スピーカーを直接接続する場合はAMPをジャンパしてください。Q出力をデジタル信号として使用する場合はCPUをジャンパしてください。
@@ -36,7 +36,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 ![Image](/docs/images/cosmac_boot_beta.png)
 
 - プログラムローダー回路図 [cosmac_boot_rev1_sch.pdf](/schematics/cosmac_boot_rev1_sch.pdf) (Rev1.0 2019/9/9)
-- 部品表 COSMAC_SERIES_BOM (準備中)
+- 部品表 [cosmac_boot_rev1_0_bom.md](/bom/cosmac_boot_rev1_0_bom.md)
 - 製作記事
     - [RCA CDP1802 COSMACを動かしてみた(5) 基板発注編](https://kanpapa.com/cosmac/blog/2018/12/rca-cdp1802-cosmac5.html)
     - [RCA CDP1802 COSMACを動かしてみた(6) 基板動作編](https://kanpapa.com/cosmac/blog/2019/01/rca-cdp1802-cosmac6.html)
@@ -49,7 +49,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 ![Image](/docs/images/cosmac_organ.png)
 
 - ミニ電子オルガンシールド [cosmac_organ_rev1_1_sch.pdf](/schematics/cosmac_organ_rev1_1_sch.pdf) (Rev1.1 2019/9/9)
-- 部品表 COSMAC_SERIES_BOM (準備中)
+- 部品表 [cosmac_organ_rev1_1_bom.md](/bom/cosmac_organ_rev1_1_bom.md)
 - 製作記事 [RCA CDP1802 COSMACを動かしてみた(8) 電子オルガンを作ってみる](https://kanpapa.com/cosmac/blog/2019/02/rca-cdp1802-cosmac8.html)
 
 ## 液晶表示シールド
@@ -59,7 +59,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 ![Image](/docs/images/cosmac_lcd.png)
 
 - 液晶表示シールド [cosmac_lcd_rev1_1_sch.pdf](/schematics/cosmac_lcd_rev1_1_sch.pdf)（Rev1.1 2019/7/13）
-- 部品表 COSMAC_SERIES_BOM (準備中)
+- 部品表 [cosmac_lcd_rev1_1_bom.md](/bom/cosmac_lcd_rev1_1_bom.md)
 - 製作記事 [RCA CDP1802 COSMACを動かしてみた(9) LCDに文字を表示してみる](https://kanpapa.com/cosmac/blog/2019/05/rca-cdp1802-cosmac9-lcd.html)
 
 ## DCモーターシールド
@@ -69,7 +69,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 ![Image](/docs/images/cosmac_motor.png)
 
 - DCモーターシールド [cosmac_motor_rev1_1_sch.pdf](/schematics/cosmac_motor_rev1_1_sch.pdf)（Rev1.1 2019/7/13）
-- 部品表 COSMAC_SERIES_BOM (準備中)
+- 部品表 [cosmac_motor_rev1_1_bom.md](/bom/cosmac_motor_rev1_1_bom.md)
 - 製作記事 [RCA CDP1802 COSMACを動かしてみた(11) モーターを制御してみた](https://kanpapa.com/cosmac/blog/2019/06/rca-cdp1802-cosmac11-1.html)
 
 ## 音声出力シールド
@@ -79,7 +79,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 ![Image](/docs/images/cosmac_AquesTalkpico.png)
 
 - 音声出力シールド [cosmac_talk_rev1_1_sch.pdf](/schematics/cosmac_talk_rev1_1_sch.pdf)（Rev1.1 2019/9/13）
-- 部品表 COSMAC_SERIES_BOM (準備中)
+- 部品表  [cosmac_talk_rev1_1_bom.md](/bom/cosmac_talk_rev1_1_bom.md)
 - 製作記事　準備中
 
 ## KiCADデータ
