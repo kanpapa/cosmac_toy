@@ -5,8 +5,8 @@ COSMAC Toy ComputerはCOSMAC基本CPUボードや応用回路をコンパクト�
 
 ## Information
 
-- 各基板はオレンジピコショップさんでCOSMACシリーズとして販売中です。
-- CQ出版社 トランジスタ技術2019年10月号に製作記事が掲載されています。
+- 各基板はオレンジピコショップさんで[COSMACシリーズ](https://store.shopping.yahoo.co.jp/orangepicoshop/cosmaca5b7.html)として販売中です。
+- CQ出版社 [トランジスタ技術2019年10月号](https://toragi.cqpub.co.jp/tabid/889/Default.aspx)に製作記事が掲載されています。
 
 ## COSMAC CPUボード
 
@@ -27,7 +27,6 @@ Q出力は簡易アンプでスピーカーを直接駆動したり、アンプ�
     - [RCA CDP1802 COSMACを動かしてみた(2) 動作確認編](https://kanpapa.com/cosmac/blog/2018/11/rca-cdp1802-cosmac2.html)
     - [RCA CDP1802 COSMACを動かしてみた(3) アセンブラ編](https://kanpapa.com/cosmac/blog/2018/11/rca-cdp1802-cosmac3.html)
     - [RCA CDP1802 COSMACを動かしてみた(4) プログラミング編](https://kanpapa.com/cosmac/blog/2018/12/rca-cdp1802-cosmac4.html)
-    - CQ出版社 [トランジスタ技術2019年10月号](https://toragi.cqpub.co.jp/tabid/889/Default.aspx)に製作記事が掲載されています。
 
 ## プログラムローダーボード
 
@@ -39,10 +38,9 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 - プログラムローダー回路図 [cosmac_boot_rev1_sch.pdf](/schematics/cosmac_boot_rev1_sch.pdf) (Rev1.0 2019/9/9)
 - 部品表 COSMAC_SERIES_BOM (準備中)
 - 製作記事
-    - RCA CDP1802 COSMACを動かしてみた(5) 基板発注編
-    - RCA CDP1802 COSMACを動かしてみた(6) 基板動作編
-    - RCA CDP1802 COSMACを動かしてみた(7) 音を出してみる編
-    - CQ出版社 トランジスタ技術2019年10月号に製作記事が掲載されています。
+    - [RCA CDP1802 COSMACを動かしてみた(5) 基板発注編](https://kanpapa.com/cosmac/blog/2018/12/rca-cdp1802-cosmac5.html)
+    - [RCA CDP1802 COSMACを動かしてみた(6) 基板動作編](https://kanpapa.com/cosmac/blog/2019/01/rca-cdp1802-cosmac6.html)
+    - [RCA CDP1802 COSMACを動かしてみた(7) 音を出してみる編](https://kanpapa.com/cosmac/blog/2019/02/rca-cdp1802-cosmac7.html)
 
 ## ミニ電子オルガンシールド
 
@@ -52,8 +50,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 
 - ミニ電子オルガンシールド [cosmac_organ_rev1_1_sch.pdf](/schematics/cosmac_organ_rev1_1_sch.pdf) (Rev1.1 2019/9/9)
 - 部品表 COSMAC_SERIES_BOM (準備中)
-- 製作記事 RCA CDP1802 COSMACを動かしてみた(8) 電子オルガンを作ってみる
-- CQ出版社 トランジスタ技術2019年10月号に製作記事が掲載されています。
+- 製作記事 [RCA CDP1802 COSMACを動かしてみた(8) 電子オルガンを作ってみる](https://kanpapa.com/cosmac/blog/2019/02/rca-cdp1802-cosmac8.html)
 
 ## 液晶表示シールド
 
@@ -63,7 +60,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 
 - 液晶表示シールド [cosmac_lcd_rev1_1_sch.pdf](/schematics/cosmac_lcd_rev1_1_sch.pdf)（Rev1.1 2019/7/13）
 - 部品表 COSMAC_SERIES_BOM (準備中)
-- 製作記事 RCA CDP1802 COSMACを動かしてみた(9) LCDに文字を表示してみる
+- 製作記事 [RCA CDP1802 COSMACを動かしてみた(9) LCDに文字を表示してみる](https://kanpapa.com/cosmac/blog/2019/05/rca-cdp1802-cosmac9-lcd.html)
 
 ## DCモーターシールド
 
@@ -73,7 +70,7 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 
 - DCモーターシールド [cosmac_motor_rev1_1_sch.pdf](/schematics/cosmac_motor_rev1_1_sch.pdf)（Rev1.1 2019/7/13）
 - 部品表 COSMAC_SERIES_BOM (準備中)
-- 製作記事 RCA CDP1802 COSMACを動かしてみた(11) モーターを制御してみた
+- 製作記事 [RCA CDP1802 COSMACを動かしてみた(11) モーターを制御してみた](https://kanpapa.com/cosmac/blog/2019/06/rca-cdp1802-cosmac11-1.html)
 
 ## 音声出力シールド
 
