@@ -17,7 +17,7 @@ Q出力は簡易アンプでスピーカーを直接駆動したり、アンプ�
 
 ![Image](/docs/images/cosmac_cpu_rev1_3.png)
 
-- COSMAC CPUボード回路図 cosmac_cpu_rev1_4_sch.pdf (Rev1.4 2019/9/9)
+- COSMAC CPUボード回路図 [cosmac_cpu_rev1_4_sch.pdf](/schematics/cosmac_cpu_rev1_4_sch.pdf) (Rev1.4 2019/9/9)
 - 部品表 COSMAC_SERIES_BOM (準備中)
 - 補足説明
     - SW1はメモリスタンバイスイッチです。STBにするとバッテリーで内容が保持されます。
