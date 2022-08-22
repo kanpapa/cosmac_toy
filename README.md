@@ -3,6 +3,8 @@
 COSMAC Toy ComputerはCOSMAC基本CPUボードや応用回路をコンパクトな基板にまとめて製作し、Arduinoのような使い方をしてみたものです。  
 さて、1970年代のCOSMAC CPUでどこまでArduinoに近づくことができるでしょうか？
 
+![image](/docs/images/cosmac_pcb_all.jpg)
+
 ## Information
 
 - 各基板はオレンジピコショップさんで[COSMACシリーズ](https://store.shopping.yahoo.co.jp/orangepicoshop/cosmaca5b7.html)として販売中です。
