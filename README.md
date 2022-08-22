@@ -17,7 +17,7 @@ Q出力は簡易アンプでスピーカーを直接駆動したり、アンプ�
 
 ![Image](/docs/images/cosmac_cpu_rev1_3.png)
 
-- COSMAC CPUボード回路図 cosmac_cpu_rev1_4_sch.pdf (Rev1.4 2019/9/9)
+- COSMAC CPUボード回路図 [cosmac_cpu_rev1_4_sch.pdf](/schematics/cosmac_cpu_rev1_4_sch.pdf) (Rev1.4 2019/9/9)
 - 部品表 COSMAC_SERIES_BOM (準備中)
 - 補足説明
     - SW1はメモリスタンバイスイッチです。STBにするとバッテリーで内容が保持されます。
@@ -104,6 +104,17 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 
 GitHub.comにあります。  
 https://github.com/kanpapa/cosmac
+
+
+## 参考・引用文献
+
+- トランジスタ技術別冊　つくるシリーズ７　手作りコンピュータ入門 CQ出版社, 1981
+- [KiCad 5.0 / 5.1 入門実習テキスト『KiCad Basics for 5.x』 　Kosaka.Lab.出版掛 マッハ新書](https://booth.pm/ja/items/941963)
+- [intersil CDP1802AC/3データシート](https://www.renesas.com/jp/ja/www/doc/datasheet/cdp1802ac-3.pdf)
+- [SB-Assembler](https://www.sbprojects.net/sbasm/)
+- [COSMAC ELF - RCA CDP1802 Computing](http://www.cosmacelf.com/)
+- [Compute II Issue 3: The 1802 Instruction Set](https://www.atarimagazines.com/computeii/issue3/page52.php)
+- [The 1802 Membership Card](http://www.sunrise-ev.com/1802.htm)
 
 ## 利用上の注意
 
