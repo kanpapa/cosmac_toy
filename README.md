@@ -10,6 +10,7 @@ COSMAC Toy ComputerはCOSMAC基本CPUボードや応用回路をコンパクト�
 - 各基板はオレンジピコショップさんで[COSMACシリーズ](https://store.shopping.yahoo.co.jp/orangepicoshop/cosmaca5b7.html)として販売中です。
 - CQ出版社 [トランジスタ技術2019年10月号](https://toragi.cqpub.co.jp/tabid/889/Default.aspx)に製作記事が掲載されています。
 - [COSMAC研究会](https://kanpapa.com/cosmac/blog/cosmac-toy/)に製作記事をまとめています。
+- プログラムの入力と実行例を[Quick start guide](/docs/cosmac_toy_computer_quick_start_guide.pdf)にまとめました。
 
 ## COSMAC CPUボード
 
