@@ -1,7 +1,8 @@
 # COSMAC Toy Computer
 
-COSMAC Toy Computerは「トラ技別冊 つくるシリーズ7 手作りコンピュータ入門」（1981年5月初版）を参考にして、COSMAC基本CPUボードや応用回路をコンパクトな基板にまとめて製作し、Arduinoのような使い方をしてみたものです。  
-さて、1970年代のCOSMAC CPUでどこまでArduinoに近づくことができるでしょうか？
+COSMAC Toy Computerは「トラ技別冊 つくるシリーズ7 手作りコンピュータ入門」（1981年5月初版）を参考にして、  
+COSMAC CPUボードやプログラムローダーや実験回路をコンパクトな基板にまとめて製作したものです。  
+ROMは搭載されておらず、プログラムローダーのトグルスイッチでRAMにプログラムを書き込んで実行することができます。
 
 ![image](/docs/images/cosmac_pcb_all.jpg)
 
