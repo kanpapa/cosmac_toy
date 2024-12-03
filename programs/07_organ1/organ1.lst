@@ -1,0 +1,55 @@
+
+SB-Cross Assembler version 3.03.06
+Please visit www.sbprojects.net for a complete description.
+
+Assembling....
+
+Pass one
+Loaded 1802 overlay version 3.01.01
+
+Pass two
+0000-                  1        *
+0000-                  2        * Electronic organ program 1 for COSMAC
+0000-                  3        * SB-Assembler
+0000-                  4        *
+0000-                  5                .CR     1802
+0000-                  6                .OR     $0000
+0000-                  7        *
+0000-30 0A             8 (   2) START   BR      MAIN
+0002-                  9        *
+0002-23               10        DATA    .DB     $23     ;C
+0003-26               11                .DB     $26     ;B
+0004-2B               12                .DB     $2B     ;A
+0005-31               13                .DB     $31     ;G
+0006-38               14                .DB     $38     ;F
+0007-3B               15                .DB     $3B     ;E
+0008-43               16                .DB     $43     ;D
+0009-4C               17                .DB     $4C     ;C
+000A-                 18        *
+000A-3F 0A            19 (   2) MAIN    BN4     MAIN    ;IF EF4=0 MAIN
+000C-F8 23            20 (   2)         LDI     #IOR    ;D <- #IOR
+000E-A3               21 (   2)         PLO     3       ;R(3).0 <- D
+000F-E3               22 (   2)         SEX     3       ;X <- 3
+0010-6C               23 (   2)         INP     4       ;M(R(3)) <- BUS;N LINES=4
+0011-03               24 (   2)         LDN     3       ;D <- M(R(3))
+0012-FC 02            25 (   2)         ADI     DATA    ;D,DF <- DATA+D
+0014-A4               26 (   2)         PLO     4       ;R(4).0 <- D
+0015-04               27 (   2)         LDN     4       ;D <- M(R(4))
+0016-A5               28 (   2)         PLO     5       ;R(5).0 <- D
+0017-25               29 (   2) LOOP2   DEC     5       ;R(5)--
+0018-85               30 (   2)         GLO     5       ;D <- R(5).0
+0019-3A 17            31 (   2)         BNZ     LOOP2   ;IF D!=0 LOOP2
+001B-31 20            32 (   2)         BQ      LOOP3   ;IF Q=0 LOOP3
+001D-7B               33 (   2)         SEQ             ;Q <- 1
+001E-30 0A            34 (   2)         BR      MAIN    ;Branch to MAIN
+0020-                 35        *
+0020-7A               36 (   2) LOOP3   REQ             ;Q <- 0
+0021-30 0A            37 (   2)         BR      MAIN    ;Branch to MAIN
+0023-                 38        *
+0023-00               39        IOR     .DB     0       ;IO Register
+0024-                 40
+0024-                 41                .EN
+
+0 Errors found during assembly.
+0 Warnings found during assembly.
+
