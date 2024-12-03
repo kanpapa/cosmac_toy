@@ -106,10 +106,8 @@ LEDはバスの信号をラッチして点灯します。2つのスライドス�
 - 音声出力シールド [cosmac_talk_rev1_1_gerber.zip](/gerber/cosmac_talk_rev1_1_gerber.zip) (Rev1.1)
 
 ## サンプルアプリケーション
-
-GitHub.comにあります。  
-https://github.com/kanpapa/cosmac
-
+ 
+- [programs](/programs/) を参照してください。
 
 ## 参考・引用文献
 
