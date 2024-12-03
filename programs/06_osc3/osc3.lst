@@ -1,0 +1,40 @@
+
+SB-Cross Assembler version 3.03.06
+Please visit www.sbprojects.net for a complete description.
+
+Assembling....
+
+Pass one
+Loaded 1802 overlay version 3.01.01
+
+Pass two
+0000-                  1        *
+0000-                  2        * Oscillator program 3 for COSMAC
+0000-                  3        * SB-Assembler
+0000-                  4        *
+0000-                  5                .CR     1802
+0000-                  6                .OR     $0000
+0000-                  7        *
+0000-F8 13             8 (   2) START   LDI     #IOR    ;D <- #IOR
+0002-A5                9 (   2)         PLO     5       ;R(5).0 <- D
+0003-E5               10 (   2)         SEX     5       ;X <- 5
+0004-6A               11 (   2) LOOP1   INP     2       ;M(R(5)) <- BUS;N LINES=2
+0005-05               12 (   2)         LDN     5       ;D <- M(R(5))
+0006-A3               13 (   2)         PLO     3       ;R(3).0 <- D
+0007-23               14 (   2) LOOP2   DEC     3       ;R(3)--
+0008-83               15 (   2)         GLO     3       ;D <- R(3).0
+0009-3A 07            16 (   2)         BNZ     LOOP2   ;IF D!=0 LOOP2
+000B-31 10            17 (   2)         BQ      LOOP3   ;IF Q=0 LOOP3
+000D-7B               18 (   2)         SEQ             ;Q <- 1
+000E-30 04            19 (   2)         BR      LOOP1   ;Branch to LOOP1
+0010-                 20        *
+0010-7A               21 (   2) LOOP3   REQ             ;Q <- 0
+0011-30 04            22 (   2)         BR      LOOP1   ;Branch to LOOP1
+0013-                 23        *
+0013-00               24        IOR     .DB     0       ;IO Register
+0014-                 25
+0014-                 26                .EN
+
+0 Errors found during assembly.
+0 Warnings found during assembly.
+

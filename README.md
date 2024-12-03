@@ -11,6 +11,7 @@ ROMは搭載されておらず、プログラムローダーのトグルスイ�
 - CQ出版社 [トランジスタ技術2019年10月号](https://toragi.cqpub.co.jp/tabid/889/Default.aspx)に製作記事が掲載されています。
 - [COSMAC研究会](https://kanpapa.com/cosmac/blog/cosmac-toy/)に製作記事をまとめています。
 - プログラムの入力と実行例を[Quick start guide](/docs/cosmac_toy_computer_quick_start_guide.pdf)にまとめました。
+- サンプルプログラムのソースと実験記事を[programs](/programs/README.md)にまとめました。
 
 ## COSMAC CPUボード
 

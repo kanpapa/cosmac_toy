@@ -1,0 +1,153 @@
+
+SB-Cross Assembler version 3.03.06
+Please visit www.sbprojects.net for a complete description.
+
+Assembling....
+
+Pass one
+Loaded 1802 overlay version 3.01.01
+
+Pass two
+0000-                  1        *
+0000-                  2        * SC1602 LCD Display program 1 for COSMAC
+0000-                  3        * SB-Assembler
+0000-                  4        *
+0000-                  5                .CR     1802    ;To load the 1802 cross overlay
+0000-                  6                .OR     $0000
+0000-                  7        *
+0000-                  8        * CDP1802        SC1602LCD
+0000-                  9        * TPB---AND----> E(6)
+0000-                 10        * N2-----+
+0000-                 11        * Q -----------> RS(4)
+0000-                 12        * BUS0 --------> DB4(11)
+0000-                 13        * BUS1 --------> DB5(12)
+0000-                 14        * BUS2 --------> DB6(13)
+0000-                 15        * BUS3 --------> DB7(14)
+0000-                 16        *         GND--> R/W(5)
+0000-                 17        *         GND--> GND(2)
+0000-                 18        *         +5V--> VDD(1)
+0000-                 19        *
+0000-30 16            20 (   2) START   BR      MAIN
+0002-                 21        *
+0002-                 22        *---------------------------
+0002-                 23        * LCD Initialize Data(4bit mode, RS=0)
+0002-                 24        *---------------------------
+0002-03               25        INTDAT  .DB     $03             ;Function set (Interface is 8bits long.)
+0003-                 26        *                               ;wait 4.1ms
+0003-03               27                .DB     $03             ;Function set (Interface is 8bits long.)
+0004-                 28        *                               ;wait 100us
+0004-03               29                .DB     $03             ;Function set (Interface is 8bits long.)
+0005-                 30        *                               ;wait 40us
+0005-02               31                .DB     $02             ;Function set (Set interface to be 4 bits long.)
+0006-                 32        *                               ;wait 40us
+0006-02               33                .DB     $02             ;Function set (2Line mode)
+0007-08               34                .DB     $08             ;
+0008-                 35        *                               ;wait 40us
+0008-00               36                .DB     $00             ;Display OFF, Cursor OFF, Blink OFF
+0009-08               37                .DB     $08             ;
+000A-                 38        *                               ;wait 40us
+000A-00               39                .DB     $00             ;Clear Display
+000B-01               40                .DB     $01             ;
+000C-                 41        *                               ;wait 1.64ms
+000C-00               42                .DB     $00             ;Entry Mode Set(Cursor right, shift off)
+000D-06               43                .DB     $06             ;
+000E-                 44        *                               ;wait 40us
+000E-00               45                .DB     $00             ;Display ON, Cursor OFF, Blink OFF
+000F-0C               46                .DB     $0C             ;
+0010-                 47        *                               ;wait 40us
+0010-                 48        *---------------------------
+0010-                 49        * LCD Display data(4bit mode, RS=1)
+0010-                 50        *---------------------------
+0010-03               51                .DB     $03             ;"1"
+0011-01               52                .DB     $01             ;
+0012-                 53        *                               ;wait 40us
+0012-03               54                .DB     $03             ;"2"
+0013-02               55                .DB     $02             ;
+0014-                 56        *                               ;wait 40us
+0014-03               57                .DB     $03             ;"3"
+0015-03               58                .DB     $03             ;
+0016-                 59        *                               ;wait 40us
+0016-                 60        *----------------------
+0016-                 61        * Main routine
+0016-                 62        *----------------------
+0016-7A               63 (   2) MAIN    REQ                     ;RS=0
+0017-F8 02            64 (   2)         LDI     #INTDAT         ;INTDAT -> D
+0019-A3               65 (   2)         PLO     3               ;D -> R(3).0
+001A-E3               66 (   2)         SEX     3               ;3 -> X
+001B-                 67        *
+001B-                 68        * LCD Initrize
+001B-                 69        *
+001B-                 70        * Function set (Interface is 8bits long.)
+001B-                 71        *
+001B-64               72 (   2)         OUT     4               ;M(R(X))->BUS, R(X)++
+001C-                 73        *
+001C-                 74        * Wait 4.1ms
+001C-                 75        *
+001C-F8 40            76 (   2)         LDI     #64             ;Load immediate value 170 into 0
+001E-A5               77 (   2)         PLO     5               ;Put D in R5,0
+001F-25               78 (   2) LOOP1   DEC     5               ;Decrement R5 by 1 over 8 bits
+0020-85               79 (   2)         GLO     5               ;Get R5.0 to test
+0021-3A 1F            80 (   2)         BNZ     LOOP1           ;If R5.0 != 0, branch to LOOP
+0023-                 81        *
+0023-                 82        * Function set (Interface is 8bits long.)
+0023-                 83        *
+0023-64               84 (   2)         OUT     4               ;M(R(X))->BUS, R(X)++
+0024-                 85        *
+0024-                 86        * Wait 100us
+0024-                 87        *
+0024-F8 02            88 (   2)         LDI     #2              ;Load immediate value 2 into 0
+0026-A5               89 (   2)         PLO     5               ;Put D in R5,0
+0027-25               90 (   2) LOOP2   DEC     5               ;Decrement R5 by 1 over 8 bits
+0028-85               91 (   2)         GLO     5               ;Get R5.0 to test
+0029-3A 27            92 (   2)         BNZ     LOOP2           ;If R5.0 != 0, branch to LOOP
+002B-                 93        *
+002B-                 94        *
+002B-                 95        *
+002B-F8 08            96 (   2)         LDI     #8              ;Loop 8 count
+002D-A5               97 (   2)         PLO     5               ;D -> R(5).0
+002E-64               98 (   2) LOOP3   OUT     4               ;M(R(3))->BUS, R(3)++
+002F-25               99 (   2)         DEC     5               ;R(5).0--
+0030-85              100 (   2)         GLO     5               ;R(5).0 -> D
+0031-3A 2E           101 (   2)         BNZ     LOOP3
+0033-                102        *
+0033-                103        * Wait 1.64ms
+0033-                104        *
+0033-F8 20           105 (   2)         LDI     #32             ;Load immediate value 32 into 0
+0035-A5              106 (   2)         PLO     5               ;Put D in R5,0
+0036-25              107 (   2) LOOP4   DEC     5               ;Decrement R5 by 1 over 8 bits
+0037-85              108 (   2)         GLO     5               ;Get R5.0 to test
+0038-3A 36           109 (   2)         BNZ     LOOP4           ;If R5.0 != 0, branch to LOOP
+003A-                110        *
+003A-                111        * Send Enrty Mode Set/Set Address
+003A-                112        *
+003A-F8 04           113 (   2)         LDI     #4              ;Loop 4 count
+003C-A5              114 (   2)         PLO     5               ;D -> R(5).0
+003D-64              115 (   2) LOOP5   OUT     4               ;M(R(3))->BUS, R(3)++
+003E-25              116 (   2)         DEC     5               ;R(5).0--
+003F-85              117 (   2)         GLO     5               ;R(5).0 -> D
+0040-3A 3D           118 (   2)         BNZ     LOOP5
+0042-                119        *
+0042-                120        * SET Register Select
+0042-                121        *
+0042-7B              122 (   2)         SEQ                     ;RS=1
+0043-                123        *
+0043-                124        * Write data to RAM
+0043-                125        *
+0043-F8 06           126 (   2)         LDI     #6              ;Loop 6 count
+0045-A5              127 (   2)         PLO     5               ;D -> R(5).0
+0046-64              128 (   2) LOOP6   OUT     4               ;M(R(3)) -> BUS; R(3)++
+0047-25              129 (   2)         DEC     5               ;R(5).0--
+0048-85              130 (   2)         GLO     5               ;R(5).0 -> D
+0049-3A 46           131 (   2)         BNZ     LOOP6
+004B-                132        *
+004B-                133        * RESET Register Select
+004B-                134        *
+004B-7A              135 (   2)         REQ                     ;RS=0
+004C-                136        *
+004C-30 4C           137 (   2) STOP    BR      STOP            ;HALT
+004E-                138        *
+004E-                139                .EN
+
+0 Errors found during assembly.
+0 Warnings found during assembly.
+
