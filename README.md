@@ -12,6 +12,7 @@ ROMは搭載されておらず、プログラムローダーのトグルスイ�
 - [COSMAC研究会](https://kanpapa.com/cosmac/blog/cosmac-toy/)に製作記事をまとめています。
 - プログラムの入力と実行例を[Quick start guide](/docs/cosmac_toy_computer_quick_start_guide.pdf)にまとめました。
 - サンプルプログラムのソースと実験記事を[programs](/programs/README.md)にまとめました。
+- [COSMAC TOY Version2](https://github.com/kanpapa/cosmac_toy_v2)も開発中です。そちらもぜひご覧ください。
 
 ## COSMAC CPUボード
 
